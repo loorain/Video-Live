@@ -86,14 +86,19 @@ public abstract class BaseActivity extends FragmentActivity {
         if (TextUtils.isEmpty(resStr)) {
             return ;
         }
-        mHandler.post(new Runnable() {
-            @Override
-            public void run() {
-                Toast toast = Toast.makeText(BaseActivity.this, resStr,
-                        Toast.LENGTH_SHORT);
-                toast.show();
-            }
+        mHandler.post(() -> {
+            Toast toast = Toast.makeText(BaseActivity.this, resStr,
+                    Toast.LENGTH_SHORT);
+            toast.show();
         });
+    }
+
+    public void showDialog(){
+
+    }
+
+    public void dismissDialog(){
+
     }
 
     @Override

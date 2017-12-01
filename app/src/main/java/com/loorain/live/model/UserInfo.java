@@ -1,7 +1,7 @@
 package com.loorain.live.model;
 
 
-import com.loorain.live.http.IDontObfuscate;
+import com.loorain.live.common.http.IDontObfuscate;
 
 /**
  * @description: 用户信息

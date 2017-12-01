@@ -274,4 +274,8 @@
     <string name="msg_stop_push_error">当前正在直播，是否退出直播？</string>
     <string name="live_cover_upload_failed">直播封面上传失败</string>
     <string name="beauty_disenable">手机不支持美颜效果！</string>
+    <string name="login_username">用户名登录</string>
+    <string name="login_password">密码</string>
+    <string name="btn_login">登录</string>
+    <string name="error_for_restart">应用异常,正在重启</string>
 </resources>

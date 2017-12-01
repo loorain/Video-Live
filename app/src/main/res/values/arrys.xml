@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="liveMianTabs">
+        <item>最新</item>
+        <item>最热</item>
+        <item>达人</item>
+        <item>美女</item>
+    </array>
+
+    <array name="liveMainTpye">
+        <item>0</item>
+        <item>0</item>
+        <item>1</item>
+        <item>0</item>
+    </array>
+</resources>

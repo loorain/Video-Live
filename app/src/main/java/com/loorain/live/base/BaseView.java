@@ -9,7 +9,7 @@ import android.content.Context;
  */
 
 
-public interface BaseView<T> {
+public interface BaseView {
 
     /**
      * 显示加载框

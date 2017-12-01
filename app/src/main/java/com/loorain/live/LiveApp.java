@@ -2,6 +2,8 @@ package com.loorain.live;
 
 import android.app.Application;
 
+import com.loorain.live.common.logic.IMInitMgr;
+
 /**
  * @author loorain
  * @time 2017/4/9  下午4:00
@@ -13,24 +15,25 @@ public class LiveApp extends Application {
 
     private static final String BUGLY_APPID = "1400012894";
 
-    private static LiveApp instance;
+    public static LiveApp sInstance;
+
 
     @Override
     public void onCreate() {
         super.onCreate();
 
-        instance = this;
+        sInstance = this;
 
         initSDK();
 
-
     }
 
-    public static LiveApp getApplication() {
-        return instance;
-    }
+
+
 
     private void initSDK() {
+        IMInitMgr.init(this);
+
 
     }
 }

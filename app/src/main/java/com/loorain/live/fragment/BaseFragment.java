@@ -31,6 +31,12 @@ public abstract class BaseFragment extends Fragment {
         mContext = (Activity) getActivity();
     }
 
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -49,6 +55,8 @@ public abstract class BaseFragment extends Fragment {
         setListener(rootView);
         return rootView;
     }
+
+
     /**
      * 返回当前界面布局文件
      */

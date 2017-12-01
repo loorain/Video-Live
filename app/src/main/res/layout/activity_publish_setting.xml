@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:ignore="contentDescription">
+
+    <FrameLayout
+        android:id="@+id/toppanel1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorBackground"
+        android:gravity="center_vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/text_live_preview"
+            android:textSize="@dimen/h10"/>
+
+        <TextView
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="12dp"
+            android:onClick="onClick"
+            android:text="@string/btn_cancel"
+        />
+
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+
+        <LinearLayout
+            android:id="@+id/xml_push_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="290dp"
+                    android:onClick="onClick"
+                    android:scaleType="fitXY"/>
+
+                <TextView
+                    android:id="@+id/tv_pic_tip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawablePadding="5dp"
+                    android:drawableTop="@drawable/btn_camera"
+                    android:gravity="center"
+                    android:text="@string/text_live_add_title_tips"
+                    android:textColor="@color/colorTextG2"
+                    android:textSize="16sp"/>
+            </FrameLayout>
+
+            <EditText
+                android:id="@+id/live_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="top"
+                android:hint="@string/text_live_title_input"
+                android:maxLength="32"
+                android:maxLines="1"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:textColor="@color/colorTextG4"
+                android:textColorHint="@color/colorTextG2"
+                android:textSize="@dimen/h6"/>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:drawablePadding="5dp"
+                    android:drawableStart="@drawable/icon_lbs_off"
+                    android:singleLine="true"
+                    android:text="@string/text_live_close_lbs"
+                    android:textSize="@dimen/h6"/>
+
+                <com.loorain.live.ui.customviews.CustomSwitch
+                    android:id="@+id/btn_lbs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="right"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:src="@drawable/btn_switch_off"/>
+
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/tv_record"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:drawablePadding="5dp"
+                    android:drawableStart="@drawable/record_icon"
+                    android:singleLine="true"
+                    android:text="@string/text_start_screen_record"
+                    android:textSize="@dimen/h6"/>
+
+                <com.loorain.live.ui.customviews.CustomSwitch
+                    android:id="@+id/btn_record"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="end"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:onClick="onClick"
+                    android:src="@drawable/btn_switch_off"/>
+
+            </FrameLayout>
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorGray2"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorGray2"/>
+
+            <RadioGroup
+                android:id="@+id/rg_record_type"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <RadioButton
+                    android:id="@+id/rb_record_camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="摄像头直播"
+                    android:textColor="@color/colorTextG3"/>
+
+                <RadioButton
+                    android:id="@+id/rb_record_screen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="录屏直播"
+                    android:textColor="@color/colorTextG3"/>
+            </RadioGroup>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorGray2"/>
+
+            <RadioGroup
+                android:id="@+id/rg_bitrate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <RadioButton
+                    android:id="@+id/rb_bitrate_slow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="流畅"
+                    android:textColor="@color/colorTextG3"/>
+
+                <RadioButton
+                    android:id="@+id/rb_bitrate_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="高清"
+                    android:textColor="@color/colorTextG3"/>
+
+                <RadioButton
+                    android:id="@+id/rb_bitrate_fast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:text="超清"
+                    android:textColor="@color/colorTextG3"/>
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:background="@color/colorGray2"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/btn_publish"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:text="@string/text_publish"
+        android:textColor="@color/colorTextWhite"
+        android:textSize="@dimen/h9"
+        android:textStyle="bold"/>
+</LinearLayout>

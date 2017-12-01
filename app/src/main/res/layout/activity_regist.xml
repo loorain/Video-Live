@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_login_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
+    <RelativeLayout
+        android:id="@+id/rl_login_edt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:textColorHint="@color/background_gray2">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/activity_register_username"
+                android:textColorHint="@color/background_gray4"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/til_username"
+            android:textColorHint="@color/background_gray2">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/activity_register_password"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/til_password"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/login_btn_bg"
+            android:text="@string/activity_register_register"
+            android:textColor="@color/background_gray4"/>
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/btn_phone_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_login_edt"
+        android:layout_marginLeft="10dp"
+        android:background="@android:color/transparent"
+        android:text="手机号登录"
+        android:textColor="@color/background_gray3"/>
+
+    <Button
+        android:id="@+id/btn_phone_resgist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/rl_login_edt"
+        android:background="@android:color/transparent"
+        android:text="手机注册"
+        android:textColor="@color/background_gray3"
+    />
+</RelativeLayout>

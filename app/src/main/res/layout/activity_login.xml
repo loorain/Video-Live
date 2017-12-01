@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_login_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
+    android:paddingTop="100dp">
+    <RelativeLayout
+        android:id="@+id/rl_login_edt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/white">
+
+            <EditText
+                android:id="@+id/et_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/activity_login_username"
+                android:ellipsize="end"
+                android:inputType="textEmailAddress"
+                android:imeOptions="actionUnspecified"
+                android:maxLines="1"
+                android:maxLength="24"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/white"
+            android:layout_below="@id/til_username">
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:imeActionId="@+id/login"
+                android:imeOptions="actionUnspecified"
+                android:inputType="textPassword"
+                android:maxLength="24"
+                android:maxLines="1"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                android:hint="@string/activity_login_password"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/til_password"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/login_btn_bg"
+            android:text="@string/btn_login"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/btn_phone_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_login_edt"
+        android:layout_marginLeft="10dp"
+        android:background="@android:color/transparent"
+        android:text="@string/activity_login_phone_login"
+        android:textColor="@color/background_gray3"/>
+
+    <Button
+        android:id="@+id/btn_phone_resgist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/rl_login_edt"
+        android:background="@android:color/transparent"
+        android:text="@string/activity_login_register"
+        android:textColor="@color/background_gray3"
+    />
+</RelativeLayout>
